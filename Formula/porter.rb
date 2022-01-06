@@ -1,4 +1,5 @@
-homepage "https://porter.run"
+class Porter < Formula
+  homepage "https://porter.run"
   version "v0.14.0-test5"
 
   on_macos do
