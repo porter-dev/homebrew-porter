@@ -1,10 +1,10 @@
 class Porter < Formula
   homepage "https://porter.run"
-  version "v0.23.3"
+  version "v0.24.0"
 
   on_macos do
-    url "https://github.com/porter-dev/porter/releases/download/v0.23.3/porter_v0.23.3_Darwin_x86_64.zip"
-    sha256 "9b4b592e17884ff949da40314175dc939f0ff0e81fa61911e14470c850366f37"
+    url "https://github.com/porter-dev/porter/releases/download/v0.24.0/porter_v0.24.0_Darwin_x86_64.zip"
+    sha256 "c22ed562b32e5387183e19ff540bb5155b4c935051a6d105c3ae5da889291932"
 
     def install
       bin.install "porter"
