@@ -4,7 +4,7 @@ class Porter < Formula
 
   on_macos do
     url "https://github.com/porter-dev/porter/releases/download/v0.42.1/porter_v0.42.1_Darwin_x86_64.zip"
-    sha256 "SHA25641d7407616a1ae159dcca1a1cd417f346cb90d70a4542feba9efc8fdab37067c"
+    sha256 "41d7407616a1ae159dcca1a1cd417f346cb90d70a4542feba9efc8fdab37067c"
 
     def install
       bin.install "porter"
