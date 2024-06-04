@@ -21,7 +21,7 @@ class Porter < Formula
       sha256 "0c933bd517f27977297423084f44cbb2a8a106dbf8b293646e1c9f3740c460e1"
 
       def install
-        bin.install "porter"
+        bin.install "porter_0.54.0_darwin_arm64" => "porter"
       end
     end
   end
