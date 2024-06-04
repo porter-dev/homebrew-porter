@@ -13,7 +13,7 @@ class Porter < Formula
       sha256 "d3db4139ced1687cbb30ea973ba3be10b5fe949ed0558979f2df19e1b1faa95f"
 
       def install
-        bin.install "porter_0.54.1_darwin_amd64" => "dist/porter"
+        bin.install "porter_0.54.1_darwin_amd64" => "porter"
       end
     end
     on_arm do
@@ -21,7 +21,7 @@ class Porter < Formula
       sha256 "20395aef91cdbc94d67840b790ba2c20632c0035463c09bbbdd3f804f5301463"
 
       def install
-        bin.install "porter_0.54.1_darwin_arm64" => "dist/porter"
+        bin.install "porter_0.54.1_darwin_arm64" => "porter"
       end
     end
   end
@@ -33,7 +33,7 @@ class Porter < Formula
         sha256 "9d1591cdb658e4240917881b90bda37431c3df94d60bbcb71d496b72b4a31da4"
 
         def install
-          bin.install "porter_0.54.1_linux_amd64" => "dist/porter"
+          bin.install "porter_0.54.1_linux_amd64" => "porter"
         end
       end
     end
@@ -43,7 +43,7 @@ class Porter < Formula
         sha256 "0f96f210f36a88dc3bf9e814c20b7dda4ae2c851f2d0460dc8d3748dc1f714a3"
 
         def install
-          bin.install "porter_0.54.1_linux_arm64" => "dist/porter"
+          bin.install "porter_0.54.1_linux_arm64" => "porter"
         end
       end
     end
