@@ -10,7 +10,7 @@ class Porter < Formula
   on_macos do
     on_intel do
       url "https://github.com/porter-dev/cli/releases/download/v0.54.0/porter_0.54.0_darwin_amd64"
-      sha256 "cdc8957fbbdf2ecc3359e97511c29e12288f2d7f6b169e566eb088723ce196aa"
+      sha256 "8253254d2429c755a7c7054b8c16911b18194301cbd7e8203788064cc3e8c91a"
 
       def install
         bin.install "porter_0.54.0_darwin_amd64" => "dist/porter"
@@ -18,10 +18,10 @@ class Porter < Formula
     end
     on_arm do
       url "https://github.com/porter-dev/cli/releases/download/v0.54.0/porter_0.54.0_darwin_arm64"
-      sha256 "0c933bd517f27977297423084f44cbb2a8a106dbf8b293646e1c9f3740c460e1"
+      sha256 "4180b7200aab5d55c60e7636adb563dea8d7af75844adaef720135fa403af299"
 
       def install
-        bin.install "porter_0.54.0_darwin_arm64" => "porter"
+        bin.install "porter_0.54.0_darwin_arm64" => "dist/porter"
       end
     end
   end
@@ -30,7 +30,7 @@ class Porter < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/porter-dev/cli/releases/download/v0.54.0/porter_0.54.0_linux_amd64"
-        sha256 "00ca918b900d09ec1d166d7b2d006ab23685c77f9d51a3dec37931cbc05c80d4"
+        sha256 "92528e8b1a22629da683a53df1a7d3d46625160cdd5c35103f054bc33baed76a"
 
         def install
           bin.install "porter_0.54.0_linux_amd64" => "dist/porter"
@@ -40,7 +40,7 @@ class Porter < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/porter-dev/cli/releases/download/v0.54.0/porter_0.54.0_linux_arm64"
-        sha256 "8a86f5876c736d38ef7866076af65a799d862cc0dbd66e780d1555fbf9bec19a"
+        sha256 "27efe70041ace52c7f7f115ac03fd43a56ceafa8fb992a613a4b93f00701e230"
 
         def install
           bin.install "porter_0.54.0_linux_arm64" => "dist/porter"
