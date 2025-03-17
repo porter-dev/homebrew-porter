@@ -5,23 +5,23 @@
 class Porter < Formula
   desc "Deploy your applications into your own cloud account"
   homepage "https://porter.run"
-  version "0.57.12"
+  version "0.57.13"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/porter-dev/releases/releases/download/v0.57.12/porter_0.57.12_darwin_amd64"
-      sha256 "2fdb35ab84373d17ff1273fa3a6ed9491071e2236c9d6d5d9fe61aefebd90557"
+      url "https://github.com/porter-dev/releases/releases/download/v0.57.13/porter_0.57.13_darwin_amd64"
+      sha256 "de2d89cb6838b1a402131cc57aa52b9de343ebe2b4ce2526944a4941bb77fb16"
 
       def install
-        bin.install "porter_0.57.12_darwin_amd64" => "porter"
+        bin.install "porter_0.57.13_darwin_amd64" => "porter"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/porter-dev/releases/releases/download/v0.57.12/porter_0.57.12_darwin_arm64"
-      sha256 "6000844b0a657e26956ed098785e2cb9ccc83d1931743ba8d0148cdcda5f12e0"
+      url "https://github.com/porter-dev/releases/releases/download/v0.57.13/porter_0.57.13_darwin_arm64"
+      sha256 "7b2e8a8a5d0676ecf5cd55d9edff9e6ded7b467ed02364e7b6929ee99d71dd7f"
 
       def install
-        bin.install "porter_0.57.12_darwin_arm64" => "porter"
+        bin.install "porter_0.57.13_darwin_arm64" => "porter"
       end
     end
   end
@@ -29,21 +29,21 @@ class Porter < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/porter-dev/releases/releases/download/v0.57.12/porter_0.57.12_linux_amd64"
-        sha256 "289d4a1522d82a46e0363b0ef1776b1230060348da8b97c01dc1bc72fdb08a9b"
+        url "https://github.com/porter-dev/releases/releases/download/v0.57.13/porter_0.57.13_linux_amd64"
+        sha256 "ac13879a27e4afa0cfd80bc363608ce07de5cb05ae644d1ddd22ca9c8bb3a6db"
 
         def install
-          bin.install "porter_0.57.12_linux_amd64" => "porter"
+          bin.install "porter_0.57.13_linux_amd64" => "porter"
         end
       end
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/porter-dev/releases/releases/download/v0.57.12/porter_0.57.12_linux_arm64"
-        sha256 "eb02874dec8291227706549504d9482f1c7c2b22cd639e9b21f2f0b587e49c44"
+        url "https://github.com/porter-dev/releases/releases/download/v0.57.13/porter_0.57.13_linux_arm64"
+        sha256 "6a249c03cda6f94b8f0bc30d9d3efed6423aa5ae852747e65c96db09ab4e31d2"
 
         def install
-          bin.install "porter_0.57.12_linux_arm64" => "porter"
+          bin.install "porter_0.57.13_linux_arm64" => "porter"
         end
       end
     end
