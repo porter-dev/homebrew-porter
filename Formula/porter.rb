@@ -5,40 +5,40 @@
 class Porter < Formula
   desc "Deploy your applications into your own cloud account"
   homepage "https://porter.run"
-  version "0.65.7"
+  version "0.65.8"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/porter-dev/releases/releases/download/v0.65.7/porter_0.65.7_darwin_amd64"
-      sha256 "0d7c5047e40249f8705ff541654598246da0df18069232e54639fa1f873e7356"
+      url "https://github.com/porter-dev/releases/releases/download/v0.65.8/porter_0.65.8_darwin_amd64"
+      sha256 "cd2f54701655102e0c02ffcb65be50d7900410aaaa19347018400ad7e20a003d"
 
       def install
-        bin.install "porter_0.65.7_darwin_amd64" => "porter"
+        bin.install "porter_0.65.8_darwin_amd64" => "porter"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/porter-dev/releases/releases/download/v0.65.7/porter_0.65.7_darwin_arm64"
-      sha256 "1b49f3275cec395636bbfe22490a992b426f15003f5ad22f8e6cbfa88870b266"
+      url "https://github.com/porter-dev/releases/releases/download/v0.65.8/porter_0.65.8_darwin_arm64"
+      sha256 "6c3e6dfc5562e686c6fa921ef7f4e90b3f5a0df7d5106cdb0bf86b354a363acd"
 
       def install
-        bin.install "porter_0.65.7_darwin_arm64" => "porter"
+        bin.install "porter_0.65.8_darwin_arm64" => "porter"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/porter-dev/releases/releases/download/v0.65.7/porter_0.65.7_linux_amd64"
-      sha256 "a9f11debf6bc7133ab123dd15dd7b95ae709f651a866bb6a2acbc27d25239e49"
+      url "https://github.com/porter-dev/releases/releases/download/v0.65.8/porter_0.65.8_linux_amd64"
+      sha256 "2fb0323945350edbf7805921255f3c4e9f9edc3f9ad58397be67b0f563acc780"
       def install
-        bin.install "porter_0.65.7_linux_amd64" => "porter"
+        bin.install "porter_0.65.8_linux_amd64" => "porter"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/porter-dev/releases/releases/download/v0.65.7/porter_0.65.7_linux_arm64"
-      sha256 "77876806dd76f805b6af1910c30eb6939912b11bfeafe5c9cf18ceee87148f42"
+      url "https://github.com/porter-dev/releases/releases/download/v0.65.8/porter_0.65.8_linux_arm64"
+      sha256 "daf6f3a8e1a730c97ad7e0ff545bdb10496170403e9528fff06ea00b81a93371"
       def install
-        bin.install "porter_0.65.7_linux_arm64" => "porter"
+        bin.install "porter_0.65.8_linux_arm64" => "porter"
       end
     end
   end
