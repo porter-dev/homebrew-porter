@@ -5,41 +5,52 @@
 class Porter < Formula
   desc "Deploy your applications into your own cloud account"
   homepage "https://porter.run"
-  version "0.69.3"
+  version "0.69.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/porter-dev/releases/releases/download/v0.69.3/porter_0.69.3_darwin_amd64"
-      sha256 "7b1b19e482495268afa08835c5d94be153cae97ad4c1d30c41eb31e84af65a9d"
+      url "https://github.com/porter-dev/releases/releases/download/v0.69.4/porter_0.69.4_darwin_amd64"
+      sha256 "b94f4a6eae7e2808f2d828cae022ca3c6e07a4c98138643ebf1b48a9152de31b"
 
       define_method(:install) do
-        bin.install "porter_0.69.3_darwin_amd64" => "porter"
+        bin.install "porter_0.69.4_darwin_amd64" => "porter"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/porter-dev/releases/releases/download/v0.69.3/porter_0.69.3_darwin_arm64"
-      sha256 "53723601628e10d258202d4b149c71f185cdc95097a6505bafdb6f9381cd2f83"
+      url "https://github.com/porter-dev/releases/releases/download/v0.69.4/porter_0.69.4_darwin_arm64"
+      sha256 "8eaca1a53d1fe9d453353a7919cda9fee9f5c64decf48b4c20642350277154f7"
 
       define_method(:install) do
-        bin.install "porter_0.69.3_darwin_arm64" => "porter"
+        bin.install "porter_0.69.4_darwin_arm64" => "porter"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/porter-dev/releases/releases/download/v0.69.3/porter_0.69.3_linux_amd64"
-      sha256 "efaa3d48d0285f7b8bbc21e6499f7b290b0c3e48bd9cda69a5bc3c4e0eee6fe6"
+      url "https://github.com/porter-dev/releases/releases/download/v0.69.4/porter_0.69.4_linux_amd64"
+      sha256 "4fb478063f5c2b66f0b15e8ad449038f99fd74386e29fda3810c0d0f42112ce9"
       define_method(:install) do
-        bin.install "porter_0.69.3_linux_amd64" => "porter"
+        bin.install "porter_0.69.4_linux_amd64" => "porter"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/porter-dev/releases/releases/download/v0.69.3/porter_0.69.3_linux_arm64"
-      sha256 "24d375e045cbfc621108a713d2819e5394073034b44970e52f457189c11f8c90"
+      url "https://github.com/porter-dev/releases/releases/download/v0.69.4/porter_0.69.4_linux_arm64"
+      sha256 "a55bd68494561588be50cecb71dd1dfe996d6b71a846e6827c3001718a08c531"
       define_method(:install) do
-        bin.install "porter_0.69.3_linux_arm64" => "porter"
+        bin.install "porter_0.69.4_linux_arm64" => "porter"
       end
     end
+  end
+
+  def caveats
+    <<~EOS
+      Run 'porter auth login' to get started.
+
+      Using an AI coding agent? Porter also ships an MCP server so your agent
+      can deploy and manage apps for you:
+        curl -fsSL https://agents.porter.run | sh
+      Docs: https://docs.porter.run/mcp/overview
+    EOS
   end
 end
